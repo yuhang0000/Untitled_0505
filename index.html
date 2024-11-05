@@ -25,11 +25,21 @@
 	backdrop-filter: blur(5px);
 }
 .link_img{
-	width:350px;
+	width:300px;
 	height:64px;
 }
 p{
 	margin:0;
+}
+.link_text{
+	color:#eeeeeeee;
+	text-decoration:none;
+}
+.text_center{
+	align-items:center; 
+	justify-content:center; 
+	float:center; 
+	display:flex; 
 }
 </style>
 <script type="text/javascript" src="./js/home.js"></script>
@@ -51,19 +61,31 @@ p{
 <div id="BG1" style="display:block; width:100%; height:100%; background:url(./image/background-1.png); background-position:0 0">
 <!-- calc 蠻好用滴 ; border-radius 設置圓角半徑 ; box-shadow 添加陰影 ; filter:blur() 模糊 ; backdrop-filter:blur(); 背景模糊 -->
 <div style="display:block; wight:100%; height:calc(100vh - 50px - 100px); background:#ffffffaa;">
+
+<!-- note -->
+<div id="note" style="position:absolute; width:35vw; height:50vh; background:#aaaaaa11;">
+<!-- 標題 -->
+<div style="width:100%; height:50px;"><a class="text_center" style="widht:100%; height:100%; color:#aaaaaaee; font-size:22px;">一些公告</a></div>
+<!-- 正文 -->
+<div style="width:100%; height:100%;"><a class="text_center" style="widht:100%; height:100%; color:#aaaaaaee; font-size:18px;" id="notetext" style="">介裏公告欸，但不知道寫點啥，隨便寫點。</a></div>
+</div>
+
 <!-- link -->
-<div style="position:absolute; top:200px; right:calc(10vw)" id="list">
-<img style="position:relative; width:150px; height:150px; border-radius:128px; box-shadow: 0 4px 24px rgba(0,0,0,0.3); left:80px; " src="./image/mian.png">
-<p><img style="width:300px; margin:0px; position:relative; top:5px;" src="./image/title.png"></p>
-<a href="https://space.bilibili.com/497628252/" target="_blank"><div class="link_button" id="bili"><img class="link_img" src="./image/link/bili.png"></div></a>
-<a href="https://x.com/MayFox555/" target="_blank"><div class="link_button" id="twitter"><img class="link_img" src="./image/link/twitter.png"></div></a>
-<a href="https://bowlroll.net/file/322764" target="_blank"><div class="link_button" id="bowlroll"><img class="link_img" src="./image/link/bowlroll.png"></div></a>
+<div id="ib" style="position:absolute; opacity:0; right:calc(10vw - 40px); display:block; background:#f3875955; width:400px; height:calc(100% - 50px - 100px);"></div>
+<div style="position:absolute; top:180px; right:calc(10vw)" id="list">
+<!-- <img style="position:relative; width:150px; height:150px; border-radius:128px; box-shadow: 0 4px 24px rgba(0,0,0,0.3); left:85px; " src="./image/mian.png"> -->
+<p id="i0" style="position:relative; opacity:0;"><img style="width:300px; margin:0px; position:relative; top:5px; left:10px;" src="./image/title.png"></p>
+<a id="i1" style="position:relative; opacity:0;" href="https://x.com/MayFox555/" target="_blank"><div class="link_button" id="twitter"><img class="link_img" src="./image/link/twitter.png"></div></a>
+<a id="i2" style="position:relative; opacity:0;" href="https://www.nicovideo.jp/user/123715513" target="_blank"><div class="link_button" id="bowlroll"><img class="link_img" src="./image/link/nico.png"></div></a>
+<a id="i3" style="position:relative; opacity:0;" href="https://bsky.app/profile/untitled-0505.bsky.social" target="_blank"><div class="link_button" id="bowlroll"><img class="link_img" src="./image/link/bsky.png"></div></a>
+<a id="i4" style="position:relative; opacity:0;" href="https://space.bilibili.com/497628252/" target="_blank"><div class="link_button" id="bili"><img class="link_img" src="./image/link/bili.png"></div></a>
+<a id="i5" style="position:relative; opacity:0;" href="https://bowlroll.net/file/322764" target="_blank"><div class="link_button" id="bowlroll"><img class="link_img" src="./image/link/bowlroll.png"></div></a>
 </div>
 </div>
 <!-- 頁尾 -->
 <div style="display: block; width:100%; background:#aaaaaaaa; height:100px;">
-<p style="widht:100%; height:100%; align-items:center; justify-content:center; float:center; display:flex; color:#eeeeeeee;">
-Copyright &copy; 2024 Gogou Untitled0505 &nbsp; &nbsp; 頁面組建 & 維護:&nbsp;<a style="color:#eeeeeeee; text-decoration:none;" href="https://yuhang0000.github.io/" target="_blank">yuhang0000</p>
+<p class="text_center" style="widht:100%; height:100%; color:#eeeeeeee;">
+Copyright &copy; 2024 Gogou Untitled0505 &nbsp; &nbsp; 頁面組建 & 維護:&nbsp;<a class="link_text" href="https://yuhang0000.github.io/" target="_blank">yuhang0000</p>
 </div>
 </div>
 </body>
