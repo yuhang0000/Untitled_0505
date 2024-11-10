@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
   //讀取公告
   try{
     let notetext = document.getElementById('notetext');
+    let notetime = document.getElementById('notetime');
     fetch("../ini/notice.ini")
     .then(response =>{
       if(response.ok != true){
@@ -63,7 +64,11 @@ document.addEventListener('DOMContentLoaded', function() {
       return response.text();
     })
     .then(data =>{
-      notetext.innerText = data;
+      //notetext.innerText = data;
+      //文本
+      notetext.innerText = data.substring(data.indexOf("[notice]") + 10,data.indexOf("[updata]"));
+      //時間
+      notetime.innerText = data.substring(data.indexOf("[updata]") + 10);
     })
   }
   catch{
